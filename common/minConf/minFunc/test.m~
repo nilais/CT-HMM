@@ -1,0 +1,5 @@
+function [obj,grad] = logistic_loss(w,ePerEx,RFInput, lambda)
+    y = 1 ./ (1 + exp(w' * RFInput));
+    obj = y' * ePerEx + lambda / 2 * w'*w);
+    grad = lambda * w + repmat(y * (1-y), 
+end
